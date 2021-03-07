@@ -14,7 +14,7 @@
 
     <!-- Vertical navbar -->
     <div class="vertical-nav bg-dark" id="sidebar" style="border-right:1px solid #dcdcdc;">
-  		<div class="py-4 px-3 mb-4 bg-dark">
+  		<div class="py-4 px-3 mb-4 bg-dark mt-4">
       		<div class="media-body">
                 <a href="<?php echo home_url( '/' ); ?>">
                     <h4 class="font-weight-white text-muted mb-0">XCODE<span style="font-weight:300;"> :: blog</span></h4>
