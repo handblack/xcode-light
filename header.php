@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/highlight/styles/default.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
+        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
         <?php wp_head(); ?>
     </head>
 <body <?php body_class(); ?>>
