@@ -8,18 +8,14 @@
                             <?php the_title(); ?> </h4>
                         </a>
 
-            <?php echo esc_html ( get_the_excerpt() ); ?>
+            <p class="lead"><?php echo esc_html ( get_the_excerpt() ); ?></a>
         </article>
     <?php endwhile; else: ?>
         <h4><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'the-bootstrap-blog' ); ?></h4>
     <?php endif; ?>
 </div>
-
-
 <!-- 
 #################################################
 Content Wrapper. Contains page content -->
-
- 
 
 <?php get_footer();?>
