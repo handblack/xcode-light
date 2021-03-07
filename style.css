@@ -1,0 +1,26 @@
+/*
+Theme Name: The Bootstrap Blog
+Author: Elias Fuentes (handblack)
+Author URI: https://www.facebook.com/handblack
+Description: basa en la libreria bootstrap.
+Version: 0.1.0.0
+Requires at least: 5.0
+Tested up to: 5.5
+Requires PHP: 7.0
+Tags:
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: miasoftware.net
+ **/
+
+ .content-wrapper {
+    background: #fff;
+}
+
+blockquote {
+    background-color: #F5F7F9;
+    border-left: 3px solid rgb(56, 132, 255);;
+    margin: 1.5em .7rem;
+    padding: .5em .7rem;
+}
+ 
