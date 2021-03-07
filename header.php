@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
+        <meta charset="<?php bloginfo('charset'); ?> ">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/core.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/fontawesome-free/css/all.min.css">
@@ -12,7 +13,7 @@
 <body <?php body_class(); ?>>
 
     <!-- Vertical navbar -->
-    <div class="vertical-nav bg-dark" id="sidebar">
+    <div class="vertical-nav bg-dark" id="sidebar" style="border-right:1px solid #dcdcdc;">
   		<div class="py-4 px-3 mb-4 bg-dark">
       		<div class="media-body">
                 <a href="<?php echo home_url( '/' ); ?>">
