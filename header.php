@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/highlight/styles/default.css">
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+        <script data-ad-client="ca-pub-1819647184319476" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <?php wp_head(); ?>
     </head>
 <body <?php body_class(); ?>>
@@ -18,7 +19,7 @@
       		<div class="media-body">
                 <a href="<?php echo home_url( '/' ); ?>">
                     <h4 class="font-weight-white text-muted mb-0">XCODE<span style="font-weight:300;"> :: blog</span></h4>
-                    <p class="font-weight-grey text-muted mb-0">root@localhost #</p>
+                    <p class="font-weight-grey text-muted mb-0" style="font-size:17px;">root@localhost #</p>
                 </a>
       		</div>
             <form action="/" method="get">
