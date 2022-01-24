@@ -1,94 +1,63 @@
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-    <head>
-        <meta charset="<?php bloginfo('charset'); ?> ">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/core.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/highlight/styles/default.css">
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-        <script data-ad-client="ca-pub-1819647184319476" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <?php wp_head(); ?>
-    </head>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?> ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/core.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/bootstrap-5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/bootstrap-5.1.3/css/bootstrap-docs.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/plugins/highlight/styles/default.css">
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
+    <script data-ad-client="ca-pub-1819647184319476" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <?php wp_head(); ?>
+</head>
 <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
+    <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+        <nav class="container-xxl flex-wrap  flex-md-nowrap" aria-label="Main navigation">
+            <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
+            <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="" width="32">
+            </a>
 
-    <!-- Vertical navbar -->
-    <div class="vertical-nav bg-dark" id="sidebar" style="border-right:1px solid #dcdcdc;">
-  		<div class="py-4 px-3 mb-4 bg-dark mt-4">
-      		<div class="media-body">
-                <a href="<?php echo home_url( '/' ); ?>">
-                    <h4 class="font-weight-white text-muted mb-0">XCODE<span style="font-weight:300;"> :: blog</span></h4>
-                    <p class="font-weight-grey text-muted mb-0" style="font-size:17px;">root@localhost #</p>
-                </a>
-      		</div>
-            <form action="/" method="get">
-                <div class="input-group mb-3 pt-2">
-                    <input type="text" class="form-control"  name="s" id="search" placeholder="Buscar.." aria-label="Recipient's username" aria-describedby="basic-addon2" value="<?php the_search_query(); ?>">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                </svg>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item col-6 col-md-auto">
+                <a class="nav-link p-2 active" aria-current="page" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+                </li>
+                <li class="nav-item col-6 col-md-auto">
+                <a class="nav-link p-2" href="/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
+                </li>
+                 
+            </ul>
+
+            <hr class="d-md-none text-white-50">
+
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto"> 
+                <li class="nav-item col-6 col-md-auto ">
+                    <div class="input-group input-group-sm mb-3 my-2 my-md-0 ms-md-3 ">
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-default btn-outline-default btn-flat">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </form>
-  		</div>
+                </li>
+               
 
-        <!--
-  		<p class="text-white font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+            </ul>
+  
 
-  		<ul class="nav flex-column bg-dark mb-0">
-    		<li class="nav-item">
-      			<a href="#" class="nav-link text-light font-italic bg-dark">
-                	<i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
-                		Home
-            	</a>
-    		</li>
-    		<li class="nav-item">
-      			<a href="#" class="nav-link text-light font-italic">
-                	<i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-                	About
-            	</a>
-    		</li>
-    		<li class="nav-item">
-      			<a href="#" class="nav-link text-light font-italic">
-                	<i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                	Services
-            	</a>
-    		</li>
-    		
-  		</ul>
-        -->
-        <!--
-  		<p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>
-
-        <ul class="nav flex-column bg-dark mb-0">
-            <li class="nav-item">
-                <a href="#" class="nav-link text-light font-italic">
-                <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
-                    Area charts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-light font-italic">
-                <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-                    Bar charts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-light font-italic">
-                <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
-                    Pie charts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-light font-italic">
-                <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
-                    Line charts
-                </a>
-            </li>
-        </ul>
-        -->
-	</div>
-<!-- End vertical navbar -->
-
-
- 
+             
+            </div>
+        </nav>
+    </header>
