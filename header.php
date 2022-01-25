@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="bdNavbar">
             <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
                 <li class="nav-item col-6 col-md-auto">
-                <a class="nav-link p-2 active" aria-current="page" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
+                <a class="nav-link p-2 active" aria-current="page" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"><strong>X</strong>CODE</a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
                 <a class="nav-link p-2" href="/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
@@ -43,14 +43,16 @@
 
             <ul class="navbar-nav flex-row flex-wrap ms-md-auto"> 
                 <li class="nav-item col-6 col-md-auto ">
-                    <div class="input-group input-group-sm mb-3 my-2 my-md-0 ms-md-3 ">
-                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-default btn-outline-default btn-flat">
-                                <i class="fas fa-search"></i>
-                            </button>
+                    <form action="/" method="get">
+                        <div class="input-group input-group-sm mb-3 my-2 my-md-0 ms-md-3 ">
+                            <input type="text" class="form-control" name="s" id="search" value="<?php the_search_query(); ?>" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-default btn-outline-default btn-flat" style="border:1px solid #dcdcdc;background-color:#dcdcdc">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </li>
                
 
